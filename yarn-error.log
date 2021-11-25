@@ -1,0 +1,44 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Администратор\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Администратор\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Администратор\AppData\Local\GitHubDesktop\bin;C:\Users\Администратор\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  15.10.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:69:26)
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "node.js",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "",
+      "start:dev": "cross-env NODE_ENV=development nodemon --inspect index.js localhost 7542",
+      "build": "cross-env NODE_ENV=production webpack --mode production",
+      "start": "webpack serve --mode development --open"
+    },
+    "author": "Anton Trishin",
+    "license": "ISC",
+    "devDependencies": {
+      "cross-env": "^7.0.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
