@@ -41,9 +41,6 @@ let server = http.createServer( (req, res) => {
         case `/person/${personId}`:
             userIdController(req, res, personId);
             break;
-        case "/lessons":
-            res.write(`task`);
-            break;
         default:
             res.writeHead(404)
             res.end("PAGE NOT FOUND, WRITE CORRECT URL")
