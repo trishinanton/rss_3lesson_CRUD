@@ -1,26 +1,3 @@
-// const path = require('path')
-// const  webpack  = require('webpack')
-//
-// module.exports = {
-//     mode: 'production',
-//     entry: './index.js',
-//     output: {
-//         filename: 'bundle.js',
-//         path: path.resolve(__dirname,'dist')
-//     },
-//     module: {
-//         rules: [
-//             {
-//                 test: /\.js$/,
-//                 exclude: /node_modules/,
-//                 loader: 'babel-loader'
-//             }
-//         ]
-//     },
-//     externals: ["fs","http"],
-//
-// }
-
 const fs = require('fs');
 const path = require('path');
 const {writeJsonToFile} = require("./fs-utils");
@@ -68,3 +45,28 @@ server.listen(PORT, async () => {
     //for testing
     await writeJsonToFile('db', [])
 })
+
+
+//second config
+// const path = require('path')
+// const  webpack  = require('webpack')
+//
+// module.exports = {
+//     mode: 'production',
+//     entry: './index.js',
+//     output: {
+//         filename: 'bundle.js',
+//         path: path.resolve(__dirname,'dist')
+//     },
+//     module: {
+//         rules: [
+//             {
+//                 test: /\.js$/,
+//                 exclude: /node_modules/,
+//                 loader: 'babel-loader'
+//             }
+//         ]
+//     },
+//     externals: ["fs","http"],
+//
+// }
