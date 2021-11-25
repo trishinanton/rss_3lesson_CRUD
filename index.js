@@ -1,6 +1,7 @@
 const http = require('http');
+const {userIdController} = require("./usersIdController");
 const {writeJsonToFile} = require("./fs-utils");
-const {userIdController} = require("./usersController");
+
 const {usersController} = require("./usersController");
 const {addUser} = require("./repository");
 const {getUsers} = require("./repository");
