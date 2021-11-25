@@ -37,6 +37,7 @@ let server = http.createServer( (req, res) => {
     let param = req.url.split("/")
     let index = param.indexOf('person')
     let personId = param[index+1]
+    console.log(param)
 
     switch (req.url) {
         case "/person":
