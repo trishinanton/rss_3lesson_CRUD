@@ -15,7 +15,9 @@ describe('Post Endpoints', () => {
         const res = await request(server)
             .post('/person')
             .send({
-                name: 'Anton'
+                name: 'Anton',
+                age: 18,
+                hobbies: ['game','sport']
             })
         idPerson = JSON.parse(res.text).id
         expect(res.statusCode).toEqual(200)

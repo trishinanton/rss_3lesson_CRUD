@@ -1,10 +1,7 @@
 const http = require('http');
 const {userIdController} = require("./usersIdController");
-const {writeJsonToFile} = require("./fs-utils");
-
 const {usersController} = require("./usersController");
-const {addUser} = require("./repository");
-const {getUsers} = require("./repository");
+
 
 
 console.log(process.env.NODE_ENV)
@@ -33,11 +30,9 @@ let server = http.createServer( (req, res) => {
 
     if (cors(req, res)) return;
 
-
     let param = req.url.split("/")
     let index = param.indexOf('person')
     let personId = param[index+1]
-    console.log(param)
 
     switch (req.url) {
         case "/person":
