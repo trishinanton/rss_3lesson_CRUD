@@ -13,7 +13,7 @@ exports.postReq = async (req, res)=>{
     if(newUser.name && newUser.age && newUser.hobbies){
         try {
             let result = await addUser(newUser)
-            res.writeHead(200)
+            res.writeHead(201)
             res.end(JSON.stringify(newUser));
         } catch (err) {
             res.writeHead(500)

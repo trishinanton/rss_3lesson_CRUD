@@ -8,7 +8,7 @@ exports.deleteWithPersonId = async(res,validate, personId) =>{
             const indexUser = users.findIndex(u => u.id === personId)
             if (indexUser > -1) {
                 await deleteUser(indexUser)
-                res.writeHead(200)
+                res.writeHead(204)
                 res.end('user success delete')
             } else {
                 res.writeHead(404)

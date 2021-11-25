@@ -17,7 +17,7 @@ exports.putWithPersonId = async (req,res,validate, personId) => {
                 // console.log(users[indexUser])
                 await updateUser(newUser, indexUser)
                 res.writeHead(200)
-                res.end(JSON.stringify(newUser))
+                res.end(JSON.stringify(users[indexUser]))
             } else {
                 res.writeHead(404)
                 res.end(`user this ${personId} id not found`)
